@@ -3,6 +3,12 @@ pipeline
         stages{
             stage('checkout') {
                 steps: 'git@github.com:lbg-shahnawaz-khan/testing-repo.git', branch: 'main'
+
+            stage('Build') {
+                step {
+                    sh 'mvn clean install'
+                }
+            }
             }
         }
      }
