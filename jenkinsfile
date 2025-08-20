@@ -1,0 +1,8 @@
+pipeline
+     agent any{
+        stages{
+            stage('checkout') {
+                steps: 'git@github.com:lbg-shahnawaz-khan/testing-repo.git', branch: 'main'
+            }
+        }
+     }
